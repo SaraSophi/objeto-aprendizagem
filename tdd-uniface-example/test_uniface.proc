@@ -1,0 +1,21 @@
+; Teste unitário simples usando ProcScript
+
+operation exec
+
+variables
+  numeric vResult
+endvariables
+
+; Teste unitário
+
+activate "MATH_OPS".ADD_INTS(10, 20, vResult)
+
+if (vResult = 30)
+   putmess "TESTE PASSOU: 10 + 20 = 30"
+else
+   putmess "TESTE FALHOU: esperado 30, obtido %%vResult"
+endif
+
+end
+
+;Primeira vez - o resultado esperado é: erro de ativação, pois ainda não terá um DLL exsitente
